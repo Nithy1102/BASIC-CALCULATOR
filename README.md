@@ -21,5 +21,5 @@ A modern, responsive calculator with light and dark mode toggle. Built using HTM
 - CSS3  
 - JavaScript (ES6)
 
-## 📁 Folder Structure
+
 
