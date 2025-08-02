@@ -2,7 +2,7 @@ const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
 const display = document.getElementById("calcDisplay");
 
-// Toggle light/dark mode
+
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
 
@@ -12,14 +12,14 @@ toggleBtn.addEventListener("click", () => {
     : '<i class="fas fa-moon"></i>';
 });
 
-// Set icon on load
+
 window.addEventListener("DOMContentLoaded", () => {
   const isDark = body.classList.contains("dark");
   toggleBtn.innerHTML = isDark
     ? '<i class="fas fa-sun"></i>'
     : '<i class="fas fa-moon"></i>';
 
-  // Attach button functionality
+
   document.querySelectorAll(".calc button").forEach(btn => {
     btn.addEventListener("click", () => {
       const val = btn.textContent;
@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Append value to display
+
 function appendValue(val) {
   if (display.value === "0") {
     display.value = val;
@@ -48,19 +48,19 @@ function appendValue(val) {
   }
 }
 
-// Clear display
+
 function clearDisplay() {
   display.value = "0";
 }
 
-// Toggle +/-
+
 function toggleSign() {
   if (display.value !== "0") {
     display.value = String(parseFloat(display.value) * -1);
   }
 }
 
-// Calculate result
+
 function calculate() {
   try {
     display.value = eval(display.value);
