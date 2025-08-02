@@ -1,0 +1,103 @@
+:root {
+  --bg: #f1f1f1;
+  --key: #e0e0e0;
+  --text: #333;
+  --primary: #3366ff;
+  --toggle-bg: #e0e0e0;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --key: #2e2e2e;
+  --text: #fff;
+  --primary: #ff8c00;
+  --toggle-bg: #2e2e2e;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: background 0.3s ease;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+#themeToggle {
+  background-color: var(--toggle-bg);
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  color: var(--text);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.15), -4px -4px 10px rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#themeToggle:hover {
+  transform: scale(1.1);
+}
+
+.calc {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 15px;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: var(--bg);
+  box-shadow: 12px 12px 20px rgba(0,0,0,0.1), -8px -8px 20px rgba(255,255,255,0.6);
+}
+
+.display {
+  grid-column: span 4;
+  width: 90%;
+  padding: 1.2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background: var(--key);
+  border: none;
+  text-align: right;
+  color: var(--text);
+  margin-bottom: 10px;
+  box-shadow: inset 4px 4px 8px rgba(0,0,0,0.1), inset -4px -4px 8px rgba(255,255,255,0.5);
+}
+
+button {
+  width: 70px;
+  height: 70px;
+  border-radius: 1rem;
+  font-size: 1.4rem;
+  border: none;
+  background-color: var(--key);
+  color: var(--text);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.15), -4px -4px 10px rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

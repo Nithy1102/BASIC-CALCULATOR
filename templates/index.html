@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Calculator</title>
+  <link rel="stylesheet" href="../style/calci.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+<body>
+  <div class="container">
+    <div class="toggle-container">
+      <button id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+
+    <div class="calc">
+    <label for="calcDisplay" class="visually-hidden">Calculator Display</label>
+    <input type="text" id="calcDisplay" class="display" readonly value="0" title="Calculator display" />
+
+      <!-- Calculator buttons -->
+      <button>C</button>
+      <button>←</button>
+      <button>%</button>
+      <button class="primary">/</button>
+
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="primary">*</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="primary">-</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="primary">+</button>
+
+      <button>0</button>
+      <button>.</button>
+      <button>±</button>
+      <button class="primary">=</button>
+    </div>
+  </div>
+
+  <script src="../style/calci.js"></script>
+</body>
+</html>
